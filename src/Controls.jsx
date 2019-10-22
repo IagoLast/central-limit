@@ -1,12 +1,11 @@
 // Import dependencies
 import React from 'react';
-
 var Controls = React.createClass({
-  render(){
+  render() {
     return (<div>
-        {this.props.buttons.map(function(button){
-          return <button key={button.id} className="btn" onClick={button.onClick}>{button.text}</button>
-        })}
+      {this.props.buttons.map(function (button) {
+        return <button key={button.id} className="btn" onClick={button.onClick}>{button.text}</button>
+      })}
     </div>)
   }
 });

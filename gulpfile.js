@@ -9,15 +9,14 @@ gulp.task('build', function () {
     extensions: ['.js', '.jsx'],
     debug: true
   })
-  .transform(babelify,  {presets: ["es2015", "react"]})
-  .bundle()
-  .pipe(source('bundle.js'))
-  .pipe(gulp.dest('dist'));
+    .transform(babelify, { presets: ["es2015", "react"] })
+    .bundle()
+    .pipe(source('bundle.js'))
+    .pipe(gulp.dest('dist'));
 });
 
-gulp.task("watch", function() {
-    // calls "build-js" whenever anything changes
-    gulp.watch("src/**/*.js", ["build"]);
+gulp.task("watch", function () {
+  gulp.watch("src/**/*.jsx", ["build"]);
 });
 
 gulp.task('default', ['build']);

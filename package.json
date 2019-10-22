@@ -6,17 +6,24 @@
   "author": "Michael Freeman",
   "license": "MIT",
   "dependencies": {
+    "babel-preset-es2015": "*",
+    "babel-preset-react": "*",
+    "babelify": "*",
+    "browserify": "*",
+    "d3": "^3",
+    "gulp": "^3.9.1",
     "jquery": "^2.1.4",
-    "d3":"^3",
     "materialize-css": "^0.97.3",
     "react": "^0.14.2",
     "react-dom": "^0.14.2",
     "react-materialize": ">=0.14.0",
-    "gulp":"*",
-    "browserify":"*",
-    "babelify":"*",
-    "babel-preset-react":"*",
-    "babel-preset-es2015":"*",
-    "underscore":"*"
+    "underscore": "*"
+  },
+  "scripts": {
+    "build": "gulp",
+    "watch": "gulp watch"
+  },
+  "devDependencies": {
+    "vinyl-source-stream": "^2.0.0"
   }
 }
